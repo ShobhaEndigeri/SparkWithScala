@@ -12,9 +12,9 @@ object MovieWithHighestRatings {
 		 * 	movieId userId ratings
 		 * 	313	    673	    4	
 			58	    109	    4	
-			270			781			5	
-			13			476			2	
-			189			1				5	
+			270	    781	    5	
+			13	    476	    2	
+			189	    1	    5	
 		 */
 		val lines = sc.textFile("../input.data");
 		
