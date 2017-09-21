@@ -1,4 +1,3 @@
-package com.sundogsoftware.spark
 
 import org.apache.spark.SparkContext
 
@@ -12,12 +11,13 @@ object MovieWithHighestRatings {
 		 * 
 		 * 	movieId userId ratings
 		 * 	313	    673	    4	
-				58	    109	    4	
-				270			781			5	
-				13			476			2	
-				189			1				5	
+			58	    109	    4	
+			270			781			5	
+			13			476			2	
+			189			1				5	
 		 */
 		val lines = sc.textFile("../input.data");
+		
 		//map (movieId , ratings)
 		val input = lines.map(x => (x.split("\t")(1).toInt,x.split("\t")(2).toInt));
 		
