@@ -27,15 +27,15 @@ def main(args:Array[String]) {
 	val temp = lines.map(mapper)
 
 	import spark.implicits._
-	val schemaPeople = temp.toDS
+	val schemaTemp = temp.toDS
 
-	schemaPeople.printSchema()
+	schemaTemp.printSchema()
 
-	schemaPeople.createOrReplaceTempView("temperature")
+	schemaTemp.createOrReplaceTempView("temperature")
 
-	val teenagers = spark.sql("SELECT * FROM temperature WHERE temp > 50")
+	val temps = spark.sql("SELECT * FROM temperature WHERE temp > 50")
 
-	val results = teenagers.collect()
+	val results = temps.collect()
 
 	results.foreach(println)
 
