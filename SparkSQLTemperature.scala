@@ -1,4 +1,3 @@
-package com.sundogsoftware.spark
 
 import org.apache.spark._
 import org.apache.spark.SparkContext._
