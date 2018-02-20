@@ -1,10 +1,10 @@
-package examples
+package examples.Transformations
   
 import org.apache.spark._
 import org.apache.spark.SparkContext._
 import org.apache.log4j._
 
-object FlatMap {
+object FlatMap1 {
   def main(args:Array[String]) {
     val sc = new SparkContext("local[*]", "FlatMap")
     val x = sc.parallelize(Array(1,2,3))

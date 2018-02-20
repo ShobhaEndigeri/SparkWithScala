@@ -1,4 +1,4 @@
-package com.spark.examples
+package examples
 
 import org.apache.spark.SparkContext
 
